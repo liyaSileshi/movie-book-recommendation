@@ -47,14 +47,16 @@ def get_five_similar_movies(movie_user_likes):
     sorted_similar_movies = sorted(similar_movies,key=lambda x:x[1],reverse=True)[1:]
 
     i = 0
+    movie_array = [] #create an empty list
     for element in sorted_similar_movies:
-            print(get_title_from_index(element[0])) #element[0] gives us index of the movie
+            movie_array.append(get_title_from_index(element[0])) #element[0] gives us index of the movie
             i += 1
             if i >= 5:
                 break
 
+    return movie_array
+
 
 
 if __name__ == '__main__':
-    get_five_similar_movies('Avatar')
-    
+    print(get_five_similar_movies('Avatar'))
