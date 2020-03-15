@@ -30,23 +30,31 @@ cosine_sim = cosine_similarity(count_matrix)
 
 def get_title_from_index(index):
     return df[df.index == index]["title"].values[0]
+
 def get_index_from_title(title):
     return df[df.title == title]["index"].values[0]
 
-movie_user_likes = 'Avatar'
-movie_index = get_index_from_title(movie_user_likes)
 
-#accessing the row corresponding to given movie to find
-# all the similarity scores for that movie and then enumerating over it
-similar_movies = list(enumerate(cosine_sim[movie_index])) #tuple (index,similarity)
+def get_five_similar_movies(movie_user_likes):
+    # movie_user_likes = 'Avatar'
+    movie_index = get_index_from_title(movie_user_likes)
 
-#sorting the movies by their similarity (second index in the tuple)
-sorted_similar_movies = sorted(similar_movies,key=lambda x:x[1],reverse=True)[1:]
+    #accessing the row corresponding to given movie to find
+    # all the similarity scores for that movie and then enumerating over it
+    similar_movies = list(enumerate(cosine_sim[movie_index])) #tuple (index,similarity)
+
+    #sorting the movies by their similarity (second index in the tuple)
+    sorted_similar_movies = sorted(similar_movies,key=lambda x:x[1],reverse=True)[1:]
+
+    i = 0
+    for element in sorted_similar_movies:
+            print(get_title_from_index(element[0])) #element[0] gives us index of the movie
+            i += 1
+            if i >= 5:
+                break
 
 
-i = 0
-for element in sorted_similar_movies:
-        print(get_title_from_index(element[0])) #element[0] gives us index of the movie
-        i += 1
-        if i > 5:
-            break
+
+if __name__ == '__main__':
+    get_five_similar_movies('Avatar')
+    
