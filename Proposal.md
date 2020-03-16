@@ -75,7 +75,7 @@ Dates 3/16-3/25
 
 
 ## Approval Checklist
-- [ ] If I have a team project, I wrote this proposal to represent my work and only my work
+- ✅ If I have a team project, I wrote this proposal to represent my work and only my work
 - [ ] I have completed all the necessary parts of this proposal
 - [ ] I linked my proposal in the Spring Intensive Tracker
 
