@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     title = request.args.get('name')
-    print('title',title)
+    # print('title',title)
     movies = get_five_similar_movies(title)
     return render_template('index.html', movies = movies)
 
