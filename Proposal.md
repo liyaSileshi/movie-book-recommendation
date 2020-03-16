@@ -6,7 +6,7 @@ Dates 3/16-3/25
 **Liya Tilahun** 
 
 
-**Movie Recommendation** 
+**Movie, Music and Book Recommendation** 
 
 
 **Is your project New or Old?** New
@@ -17,52 +17,41 @@ Dates 3/16-3/25
 
 ## Description
 
-**Write a paragraph summary of the current status of your project, what you hope to achieve during the intensive, how and why**
+**During the break, I started studying python for datascience to get a headstart for term 4. I then got interested in Machine learning and one of the cool learning projects to do was recommendation engine. I have tried implementing the movie recommendation. During this intensive I hope to make the program more efficient and find recent dataset for movies, books and music so that I could implement the full program. It will be a great way for me to learn python libraries for DS and Machine Learning.**
 
 ## Challenges I Anticipate
 
-**List out the challenges you anticipate for completing this project**
+* Finding a good dataset to work with
+* Cleaning the dataset
+* Making a front-end UI
+* Use python libraries for the program
+* Create a local storage in js so users can add/save their favoirite recommendation
+
 
 ## Skateboard
 
-**ONE SINGLE aspect of product. Consider: build backend for SPD 1.2 front end, CRUD one resource, use API or library, authentication etc.**
+**Use libraries to make the movie recommendation working and make it so that users can type a movie name and get recommendations(backend part).**
 
-**Start coding and finish “Skateboard” feature before beginning “Bike”.** 
 
 ## Bike
-**ONE additional features that get you closer to your idealized product. Examples: CRUD 2nd resource, add comments, API use, authentication, library use** 
+
+**Find a dataset for books and music. Clean the dataset and work on their recommendation.** 
+
 
 ## Car
-**ONE additional feature** 
 
+**Make it so that users can add their favorite recommendation to their local storage(database).** 
+**Make a nice and clean UI**
 
 ## Personal Achievement Goals:
 
-**Each teammate must achieve 2 of 3 of their self-set personal achievement goals. If you're not on a team, delete the other teammate sections as needed.**
 
-### Teammate 1
+### Liya Tilahun
 
-1. Goal 1
-1. Goal 2
-1. Goal 3
+1. Cleaning dataset using python libraries
+1. Creating a good UI
+1. Implementing local storage using js
 
-### Teammate 2
-
-1. Goal 1
-1. Goal 2
-1. Goal 3
-
-### Teammate 3
-
-1. Goal 1
-1. Goal 2
-1. Goal 3
-
-### Teammate 4
-
-1. Goal 1
-1. Goal 2
-1. Goal 3
 
 
 ## Wireframes
