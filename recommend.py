@@ -7,7 +7,7 @@ from sklearn import datasets
 
 df = pd.read_csv('movie_dataset.csv')
 
-# print(df.keys()) #gives all the attributes in the dataset
+print(df.keys()) #gives all the attributes in the dataset
 
 features = ["keywords","cast","genres","director"] #columns we care about
 
