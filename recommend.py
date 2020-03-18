@@ -18,7 +18,6 @@ def combine_features(row):
 for feature in features:
     df[feature] = df[feature].fillna(' ') #filling all NaNs with blank string
 
-
 #applying combined_features() method over each rows of dataframe 
 #and storing the combined string in “combined_features” column
 df["combined_features"] = df.apply(combine_features,axis=1)
