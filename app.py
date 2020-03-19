@@ -1,5 +1,6 @@
-from recommend import get_five_similar_movies
+from movies import get_five_similar_movies
 from flask import Flask, request, render_template
+from books import get_five_similar_books
 
 app = Flask(__name__)
 
@@ -10,10 +11,15 @@ def index():
     movies = get_five_similar_movies(title)
     return render_template('index.html', movies = movies)
 
-
 @app.route('/search', methods=['GET'])
 def search_form():
     return render_template('index.html')
+
+@app.route('/books')
+def books():
+    title = request.args.get('name')
+    books = get_five_similar_books(title)
+    return render_template('index.html', books = books)
 
 
 if __name__ == '__main__':

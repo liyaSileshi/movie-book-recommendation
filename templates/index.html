@@ -17,4 +17,13 @@
         <p> {{movie}} </p>
     {% endfor %}
 
+    <form action='/books' method='GET'>
+        Type in a book name: <input type="search" name='name'>
+        <br>
+        <input type='submit'>
+    </form>
+    {% for book in books %}
+        <p> {{book}} </p>
+    {% endfor %}
+
 </body>
