@@ -31,12 +31,16 @@ def get_title_from_index(index):
     return df[df.index == index]["title"].values[0]
 
 def get_index_from_title(title):
-    return df[df.title == title]["index"].values[0]
-
+    try:
+        return df[df.title == title]["index"].values[0]
+    except IndexError:
+        return f'No movie with the name {title}'
 
 def get_five_similar_movies(movie_user_likes):
     # movie_user_likes = 'Avatar'
     movie_index = get_index_from_title(movie_user_likes)
+    if type(movie_index) != np.int64: #check if movie_index is not an int
+        return f'No movie with the name {movie_user_likes}'
 
     #accessing the row corresponding to given movie to find
     # all the similarity scores for that movie and then enumerating over it
