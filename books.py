@@ -54,10 +54,14 @@ def get_title_from_index(index):
     return df[df.index == index]["title"].values[0]
 
 def get_index_from_title(title):
-    return df[df.title == title]["index"].values[0]
+    try:
+        return df[df.title == title]["index"].values[0]
+    except IndexError:
+        return f'No book with the name {title}'
 
 def get_five_similar_books(book_user_likes):
     book_index = get_index_from_title(book_user_likes)
+    print('bookindex',book_index)
     #accessing the row corresponding to given movie to find
     # all the similarity scores for that movie and then enumerating over it
     similar_books = list(enumerate(cosine_sim[book_index])) #tuple (index,similarity)
@@ -74,5 +78,5 @@ def get_five_similar_books(book_user_likes):
 
 
 if __name__ == '__main__':
-    print(get_five_similar_books('Dragongirl'))
+    print(get_five_similar_books('abc'))
     

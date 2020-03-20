@@ -4,14 +4,14 @@ from books import get_five_similar_books
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/movies', methods=['GET'])
 def index():
     title = request.args.get('name')
     # print('title',title)
     movies = get_five_similar_movies(title)
     return render_template('index.html', movies = movies)
 
-@app.route('/search', methods=['GET'])
+@app.route('/', methods=['GET'])
 def search_form():
     return render_template('index.html')
 
@@ -21,6 +21,12 @@ def books():
     books = get_five_similar_books(title)
     return render_template('index.html', books = books)
 
+@app.errorhandler(404) 
+def invalid_route(e): 
+    return "404 Page not found"
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
+
