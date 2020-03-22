@@ -4,9 +4,7 @@ from sklearn.feature_extraction.text import CountVectorizer #histogram(array) re
 from sklearn.metrics.pairwise import cosine_similarity #to calculate the cosine_similarity
 from sklearn import datasets
 
-
 df = pd.read_csv('movie_dataset.csv')
-
 # print(df.keys()) #gives all the attributes in the dataset
 
 features = ["keywords","cast","genres","director"] #columns we care about
@@ -58,8 +56,6 @@ def get_five_similar_movies(movie_user_likes):
                 break
 
     return movie_array
-
-
 
 if __name__ == '__main__':
     print(get_five_similar_movies('Avatar'))
