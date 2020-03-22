@@ -1,6 +1,7 @@
 from movies import get_five_similar_movies
 from flask import Flask, request, render_template
 from books import get_five_similar_books
+import os
 
 app = Flask(__name__)
 
@@ -26,5 +27,5 @@ def invalid_route(e):
     return "404 Page not found"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
 
