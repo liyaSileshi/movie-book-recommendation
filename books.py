@@ -7,7 +7,7 @@ from scipy import sparse
 import json
 
 #data from goodbooks-10k dataset
-df = pd.read_csv('book_detail.csv')
+df = pd.read_csv('book_detail.csv', low_memory=True, nrows=5000)
 df.drop(df.columns[[-1,-6,-7]], axis=1, inplace=True) #delete these column
 
 df.drop(df[df['genre']==''].index, inplace=True)
