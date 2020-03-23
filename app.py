@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/movies', methods=['GET'])
 def index():
+    
     title = request.args.get('name')
     movies = get_five_similar_movies(title)
     if type(movies) == str: #means it's not a list of movies rather the module error message
