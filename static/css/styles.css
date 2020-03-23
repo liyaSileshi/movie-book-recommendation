@@ -1,0 +1,12 @@
+body{
+    background-color: pink;
+}
+
+#movieForm{
+    visibility: hidden;
+}
+
+#bookForm{
+    visibility: hidden;
+}
+

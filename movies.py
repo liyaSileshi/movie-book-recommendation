@@ -4,10 +4,12 @@ from sklearn.feature_extraction.text import CountVectorizer #histogram(array) re
 from sklearn.metrics.pairwise import cosine_similarity #to calculate the cosine_similarity
 from sklearn import datasets
 
+
 df = pd.read_csv('movie_dataset.csv')
 # print(df.keys()) #gives all the attributes in the dataset
 
 features = ["keywords","cast","genres","director"] #columns we care about
+
 
 def combine_features(row):
     '''combines the values of the columns into 1 string'''
