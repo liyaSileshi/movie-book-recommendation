@@ -36,12 +36,12 @@ body{
     height: 20px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9DBFAF;
+    /* color: #9DBFAF; */
     
   }
 
   .searchTerm:focus{
-    color: #00B4CC;
+    /* color: #00B4CC; */
   }
 
   .searchButton {
@@ -71,3 +71,37 @@ body{
     border-radius: 0 5px 5px 0;
     background-color: #00B4CC;
 }
+
+.container{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.title{
+  margin-left: 25%;
+}
+
+.recmovie{
+  margin-left: 10%;
+  margin-top: 2em;
+}
+
+.recbook{
+  margin-left: 10%;
+  margin-top: 2em;
+}
+
+#addWatchList{
+  background-color:#00B4CC;
+	border-radius:28px;
+	border:1px solid #00B4CC;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+

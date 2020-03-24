@@ -9,11 +9,9 @@
   <title>Reccomendation</title>
 </head>
 <body>
-    <h1>Recommender</h1>
-
-    
+    <div class=container>
+        <h1 class='title'>Get your recommendations here</h1>
         <form action='/' method='GET'>
-            
             <div class='search'>
                 <select class="form-control" id="choice" name="choice">
                     <option value="movie">movie</option>
@@ -25,18 +23,16 @@
                 </button>
             </div>
         </form>
-    
-    
-    {% for movie in movies %}
-        <p class='recmovie'> {{movie}} </p>
-    {% endfor %}
-    
+        {% for movie in movies %}
+            <p class='recmovie'> {{movie}} </p>
+        {% endfor %}
+        {% for book in books %}
+            <p class='recbook'> {{book}} </p>
+        {% endfor %}
 
-    {% for book in books %}
-        <p> {{book}} </p>
-    {% endfor %}
-
-    <button id='addWatchList'>Add to watchlist</button>
+        <button id='addWatchList'>Add to watchlist</button>
+    </div>
+    
 
     <script type= 'text/javascript' src="{{url_for('static', filename='js/script.js') }}"></script>
 
