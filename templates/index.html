@@ -10,46 +10,33 @@
 </head>
 <body>
     <h1>Recommender</h1>
-    <h2>Movie or Book?</h2>
 
-    <form action='/' method='GET'>
-        <select class="form-control" id="choice" name="choice">
-            <option value="movie">movie</option>
-            <option value="book">book</option>
-        </select>
-        <!-- <button type="submit" id='submitChoice'>Submit!</button> -->
-        <input type="text" placeholder="Search.." name="name">
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-
-
-    <!-- <input type="radio" id="movie" name="recommend" value="movie">
-    <label for="movie">Movie</label><br>
-    <input type="radio" id="book" name="recommend" value="book">
-    <label for="book">Book</label><br> -->
-
-    <form action='/movies' method='GET' id='movieForm'>
-        Type in the movie name: <input type="search" name='name'>
-        <br>
-        <input type='submit'>
-    </form>
-
+    
+        <form action='/' method='GET'>
+            
+            <div class='search'>
+                <select class="form-control" id="choice" name="choice">
+                    <option value="movie">movie</option>
+                    <option value="book">book</option>
+                </select>
+                <input type="text" class='searchTerm' placeholder="Search.." name="name">
+                <button type="submit" class='searchButton'>
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
+    
+    
     {% for movie in movies %}
         <p class='recmovie'> {{movie}} </p>
     {% endfor %}
     
-    <button id='addWatchList'>Add to watchlist</button>
 
-
-    <form action='/books' method='GET' id='bookForm'>
-        Type in a book name: <input type="search" name='name'>
-        <br>
-        <input type='submit'>
-    </form>
     {% for book in books %}
         <p> {{book}} </p>
     {% endfor %}
+
+    <button id='addWatchList'>Add to watchlist</button>
 
     <script type= 'text/javascript' src="{{url_for('static', filename='js/script.js') }}"></script>
 

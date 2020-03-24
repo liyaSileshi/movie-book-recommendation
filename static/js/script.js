@@ -1,5 +1,3 @@
-const movie = document.getElementById('movie');
-const book = document.getElementById('book');
 const movieForm = document.getElementById('movieForm');
 const bookForm = document.getElementById('bookForm');
 const addWatchList = document.getElementById('addWatchList');
@@ -12,10 +10,9 @@ let userdata;
 getUserData();
 
 
-movie.addEventListener('change', validateChoice)
-book.addEventListener('change', validateChoice)
+
 addWatchList.addEventListener('click', addLocal)
-submitChoice.addEventListener('click', getChoice)
+
 
 all_movies.forEach(movie => movie.addEventListener('click', () => {
     console.log(movie.innerHTML) //the value of the p tag
@@ -36,19 +33,19 @@ function getChoice(e) {
 
 
 
-function validateChoice() {
-    if(document.getElementById('movie').checked == true){
-        console.log(document.getElementById('movie').value)
-        movieForm.style['visibility'] = 'visible';
-        bookForm.style['visibility'] = 'hidden';
+// function validateChoice() {
+//     if(document.getElementById('movie').checked == true){
+//         console.log(document.getElementById('movie').value)
+//         movieForm.style['visibility'] = 'visible';
+//         bookForm.style['visibility'] = 'hidden';
 
-    }
-    else if(document.getElementById('book').checked == true){
-        console.log(document.getElementById('book').value)
-        bookForm.style['visibility'] = 'visible';
-        movieForm.style['visibility'] = 'hidden';
-    }   
-}
+//     }
+//     else if(document.getElementById('book').checked == true){
+//         console.log(document.getElementById('book').value)
+//         bookForm.style['visibility'] = 'visible';
+//         movieForm.style['visibility'] = 'hidden';
+//     }   
+// }
 
 function getUserData() {
     if (localStorage.getItem("movies")) {
