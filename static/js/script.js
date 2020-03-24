@@ -3,15 +3,19 @@ const book = document.getElementById('book');
 const movieForm = document.getElementById('movieForm');
 const bookForm = document.getElementById('bookForm');
 const addWatchList = document.getElementById('addWatchList');
+const submitChoice = document.getElementById('submitChoice');
+let choiceSelector = document.getElementById('choice');
 
 let all_movies = Array.from(document.querySelectorAll('p.recmovie'));
 let fav_movies = [];
 let userdata;
 getUserData();
 
+
 movie.addEventListener('change', validateChoice)
 book.addEventListener('change', validateChoice)
 addWatchList.addEventListener('click', addLocal)
+submitChoice.addEventListener('click', getChoice)
 
 all_movies.forEach(movie => movie.addEventListener('click', () => {
     console.log(movie.innerHTML) //the value of the p tag
@@ -22,6 +26,15 @@ all_movies.forEach(movie => movie.addEventListener('click', () => {
     }
     console.log(fav_movies)
 })) 
+
+
+function getChoice(e) {
+  e.preventDefault()
+  let userOption = choiceSelector.options[choiceSelector.selectedIndex].value
+  console.log(userOption)
+}
+
+
 
 function validateChoice() {
     if(document.getElementById('movie').checked == true){

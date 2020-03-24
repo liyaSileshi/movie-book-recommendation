@@ -5,16 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Reccomendation</title>
 </head>
 <body>
     <h1>Recommender</h1>
     <h2>Movie or Book?</h2>
 
-    <input type="radio" id="movie" name="recommend" value="movie">
+    <form action='/' method='GET'>
+        <select class="form-control" id="choice" name="choice">
+            <option value="movie">movie</option>
+            <option value="book">book</option>
+        </select>
+        <!-- <button type="submit" id='submitChoice'>Submit!</button> -->
+        <input type="text" placeholder="Search.." name="name">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+
+
+    <!-- <input type="radio" id="movie" name="recommend" value="movie">
     <label for="movie">Movie</label><br>
     <input type="radio" id="book" name="recommend" value="book">
-    <label for="book">Book</label><br>
+    <label for="book">Book</label><br> -->
 
     <form action='/movies' method='GET' id='movieForm'>
         Type in the movie name: <input type="search" name='name'>
