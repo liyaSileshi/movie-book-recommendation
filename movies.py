@@ -22,6 +22,7 @@ for feature in features:
 #and storing the combined string in “combined_features” column
 df["combined_features"] = df.apply(combine_features,axis=1)
 
+
 cv = CountVectorizer() #creating new CountVectorizer() object
 count_matrix = cv.fit_transform(df['combined_features']) #feeding combined strings(movie contents) to CountVectorizer() object
 cosine_sim = cosine_similarity(count_matrix)
